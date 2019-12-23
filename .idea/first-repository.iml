@@ -2,8 +2,9 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/pyqt5/2019.12.19" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/pyqt5/2019.12.20" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pyqt5/ui设计/2019.12.19" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pyqt5/ui设计/2019.12.20" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pyqt5/ui设计/2019.12.23" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
