@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/pyqt5/ui设计/2019.12.19" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/pyqt5/ui设计/2019.12.20" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/pyqt5/ui设计/2019.12.23" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/计算器(继承重写)" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
