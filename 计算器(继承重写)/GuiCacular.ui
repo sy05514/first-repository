@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,6 +16,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
@@ -20,14 +29,17 @@
       <x>230</x>
       <y>180</y>
       <width>322</width>
-      <height>231</height>
+      <height>238</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QLabel" name="label">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
        </property>
        <property name="text">
         <string>0</string>

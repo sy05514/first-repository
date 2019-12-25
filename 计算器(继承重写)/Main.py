@@ -3,8 +3,10 @@ import GuiCacular, sys
 
 
 class myDialog(GuiCacular.Ui_MainWindow):
-
-    lastClickType = 'number'
+    firstNum = '0'
+    secondNum = '0'
+    firstClickType = 'number'
+    secondClickType = 'number'
 
     def __init__(self, Dialog):
         super().setupUi(Dialog)  # 调用父类的setupUI函数
@@ -25,23 +27,23 @@ class myDialog(GuiCacular.Ui_MainWindow):
         if len(self.label.text()) > 10:
             print('数据过长，请清理后重试')
             return
-        if self.lastClickType == 'number':
+        if self.firstClickType == 'number':
             if self.label.text() == '0':
                 self.label.setText(index)
             else:
                 self.label.setText(self.label.text() + index)
-        elif self.lastClickType == '+':
+        elif self.firstClickType == '+':
             self.label.setText(self.label.text() + index)
 
     # 清空按钮
     def clickClear(self):
-        self.lastClickType = 'number'
+        self.firstClickType = 'number'
+        self.secondClickType = 'number'
         self.label.setText('0')
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = myDialog(MainWindow)  # 注意把类名修改为myDialog
-    # ui.setupUi(MainWindow)  myDialog类的构造函数已经调用了这个函数，这行代码可以删去
+    ui = myDialog(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
