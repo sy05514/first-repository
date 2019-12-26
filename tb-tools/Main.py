@@ -1,8 +1,9 @@
 import os
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QFileDialog, QMessageBox
+from PyQt5.QtCore import pyqtSlot, QUrl
+from PyQt5.QtWidgets import QFileDialog, QMessageBox, QTextEdit
+from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineSettings
 
 import ui, sys
 
@@ -15,6 +16,11 @@ class myDialog(ui.Ui_MainWindow):
         super().setupUi(Dialog)  # 调用父类的setupUI函数
         self.toolButton.clicked.connect(lambda: self.openFile())
 
+        self.webView = QWebEngineView()
+        self.webView.load(QUrl('https://www.baidu.com'))
+        self.webView.show()
+
+
     # 打开文件，存储用户信息
     def openFile(self):
         filepath, filetype = QFileDialog.getOpenFileName(filter="*.txt")
@@ -23,6 +29,7 @@ class myDialog(ui.Ui_MainWindow):
         # 清空存储用户信息
         userArray = []
         accountArray = []
+        self.lineEdit.setText('')
         self.statusbar.showMessage('')
         with open(filepath) as f:
             infoArr = f.read().split()
@@ -35,6 +42,8 @@ class myDialog(ui.Ui_MainWindow):
                 else:
                     accountArray.append(val)
         self.statusbar.showMessage('文件载入成功')
+        # 写入文件路径
+        self.lineEdit.setText(filepath)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
