@@ -4,12 +4,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
 
-import ReadTxt, sys
+import ui, sys
 
 userArray = []
 accountArray = []
 
-class myDialog(ReadTxt.Ui_MainWindow):
+class myDialog(ui.Ui_MainWindow):
 
     def __init__(self, Dialog):
         super().setupUi(Dialog)  # 调用父类的setupUI函数
