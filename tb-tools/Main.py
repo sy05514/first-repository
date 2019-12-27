@@ -3,9 +3,9 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSlot, QUrl
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QTextEdit
-from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineSettings
+from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineProfile
 
-import ui, sys
+import ui, sys, HttpRequests
 
 userArray = []
 accountArray = []
@@ -15,11 +15,7 @@ class myDialog(ui.Ui_MainWindow):
     def __init__(self, Dialog):
         super().setupUi(Dialog)  # 调用父类的setupUI函数
         self.toolButton.clicked.connect(lambda: self.openFile())
-
-        self.webView = QWebEngineView()
-        self.webView.load(QUrl('https://www.baidu.com'))
-        self.webView.show()
-
+        self.pushButton.clicked.connect(lambda: self.land())
 
     # 打开文件，存储用户信息
     def openFile(self):
@@ -31,6 +27,7 @@ class myDialog(ui.Ui_MainWindow):
         accountArray = []
         self.lineEdit.setText('')
         self.statusbar.showMessage('')
+        self.listWidget.clear()
         with open(filepath) as f:
             infoArr = f.read().split()
             if len(infoArr) % 2 != 0:
@@ -44,6 +41,16 @@ class myDialog(ui.Ui_MainWindow):
         self.statusbar.showMessage('文件载入成功')
         # 写入文件路径
         self.lineEdit.setText(filepath)
+        # 文件内容写入listWidget
+        for index, val in enumerate(userArray):
+            self.listWidget.insertItem(index, userArray[index] + '    ' + accountArray[index])
+
+    # 登录页
+    def land(self):
+        self.webView = QWebEngineView()
+        self.webView.load(QUrl('https://www.baidu.com'))
+        self.webView.setWindowTitle('webView')
+        self.webView.show()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
