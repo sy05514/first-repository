@@ -3,12 +3,13 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSlot, QUrl
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QTextEdit
-from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineProfile
+import TaobaoLand
 
 import ui, sys, HttpRequests
 
 userArray = []
 accountArray = []
+cookie = ''
 
 class myDialog(ui.Ui_MainWindow):
 
@@ -16,6 +17,7 @@ class myDialog(ui.Ui_MainWindow):
         super().setupUi(Dialog)  # 调用父类的setupUI函数
         self.toolButton.clicked.connect(lambda: self.openFile())
         self.pushButton.clicked.connect(lambda: self.land())
+        httpRequests = HttpRequests.HttpRequests()
 
     # 打开文件，存储用户信息
     def openFile(self):
@@ -47,10 +49,16 @@ class myDialog(ui.Ui_MainWindow):
 
     # 登录页
     def land(self):
-        self.webView = QWebEngineView()
-        self.webView.load(QUrl('https://www.baidu.com'))
-        self.webView.setWindowTitle('webView')
-        self.webView.show()
+        self.statusbar.showMessage('')
+        if self.lineEdit_2.text() == '' or self.lineEdit_3.text() == '':
+            self.statusbar.showMessage('用户名或密码为空')
+            return
+        res = TaobaoLand.run(self.lineEdit_2.text(), self.lineEdit_3.text())
+        if len(res) > 500:
+            self.statusbar.showMessage('登录成功，存储cookie成功')
+            cookie = res
+        else:
+            self.statusbar.showMessage('登录失败，请重新运行工具')
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
