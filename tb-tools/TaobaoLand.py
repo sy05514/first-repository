@@ -1,13 +1,13 @@
 #! -*- coding:utf-8 -*-
 # 参考 https://blog.csdn.net/Chen_chong__/article/details/82950968
 import asyncio
-import random,time
+import random, time
 
 from pyppeteer import launch
 from retrying import retry
 
 
-async def main(username ,pwd ,url):
+async def main(username, pwd, url, loop=None):
     # 以下使用await 可以针对耗时的操作进行挂起
     browser =await launch({
         'headless': False,
@@ -23,12 +23,13 @@ async def main(username ,pwd ,url):
         ],
     })  # 启动pyppeteer 属于内存中实现交互的模拟器
     page = await browser.newPage()  # 启动个新的浏览器页面，此需要下载Chromeium
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36')
-    await page.goto(url) # 访问登录页面
+    await page.setUserAgent(
+        'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36')
+    await page.goto(url)  # 访问登录页面
     # 替换淘宝在检测浏览时采集的一些参数。
     # 就是在浏览器运行的时候，始终让window.navigator.webdriver=false
-    # navigator是windiw对象的一个属性，同时修改plugins，languages，navigator 且让
-    await page.evaluate(js1) #以下为插入中间js，将淘宝会为了检测浏览器而调用的js修改其结果。
+    # navigator是window对象的一个属性，同时修改plugins，languages，navigator 且让
+    await page.evaluate(js1) # 以下为插入中间js，将淘宝会为了检测浏览器而调用的js修改其结果。
     await page.evaluate(js3)
     await page.evaluate(js4)
     await page.evaluate(js5)
@@ -37,7 +38,7 @@ async def main(username ,pwd ,url):
     await page.type('.J_UserName', username, {'delay': input_time_random() - 50})
     await page.type('#J_StandardPwd input', pwd, {'delay': input_time_random()})
 
-    #await page.screenshot({'path': './headless-test-result.png'})    # 截图测试
+    # await page.screenshot({'path': './headless-test-result.png'})    # 截图测试
     time.sleep(2)
 
     # 检测页面是否有滑块。原理是检测页面元素。
@@ -45,15 +46,16 @@ async def main(username ,pwd ,url):
 
     if slider:
         print('当前页面出现滑块')
-        #await page.screenshot({'path': './headless-login-slide.png'}) # 截图测试
-        flag,page = await mouse_slide(page=page) #js拉动滑块过去。
+        # await page.screenshot({'path': './headless-login-slide.png'}) # 截图测试
+        flag, page = await mouse_slide(page=page) # js拉动滑块过去。
         if flag:
             await page.keyboard.press('Enter') # 确保内容输入完毕，少数页面会自动完成按钮点击
             print("print enter",flag,page)
-            # await page.evaluate('''document.getElementById("J_SubmitStatic").click()''') # 如果无法通过回车键完成点击，就调用js模拟点击登录按钮。
+            # 如果无法通过回车键完成点击，就调用js模拟点击登录按钮。
+            # await page.evaluate('''document.getElementById("J_SubmitStatic").click()''')
 
             time.sleep(2)
-            #cookies_list = await page.cookies()
+            # cookies_list = await page.cookies()
             cookies = await get_cookie(page) # 导出cookie 完成登陆后就可以拿着cookie玩各种各样的事情了。
 
         else:
@@ -137,7 +139,7 @@ def retry_if_result_none(result):
 @retry(retry_on_result=retry_if_result_none,)
 async def mouse_slide(page=None):
     await asyncio.sleep(2)
-    try :
+    try:
         print('开始验证...')
         #鼠标移动到滑块，按下，滑动到头（然后延时处理），松开按键
         await page.hover('#nc_1_n1z') # 不同场景的验证码模块能名字不同。
@@ -154,14 +156,20 @@ async def mouse_slide(page=None):
         if slider_again != '验证通过':
             return None,page
         else:
-            #await page.screenshot({'path': './headless-slide-result.png'}) # 截图测试
+            # await page.screenshot({'path': './headless-slide-result.png'}) # 截图测试
             print('验证通过')
-            return 1,page
+            return 1, page
+
 
 def run(userName, passWord):
-    username = userName # 账号
-    pwd = passWord #密码
-    url = 'https://login.taobao.com/member/login.jhtml?style=mini&from=b2b&full_redirect=true' # 淘宝登录地址
-    loop = asyncio.get_event_loop()  #事件循环，开启个无限循环的程序流程，把一些函数注册到事件循环上。当满足事件发生的时候，调用相应的协程函数。
-    result = loop.run_until_complete(main(username, pwd, url))  #将协程注册到事件循环，并启动事件循环
+    # 账号
+    username = userName
+    # 密码
+    pwd = passWord
+    # 淘宝登录地址
+    url = 'https://login.taobao.com/member/login.jhtml?style=mini&from=b2b&full_redirect=true'
+    # 事件循环，开启个无限循环的程序流程，把一些函数注册到事件循环上。当满足事件发生的时候，调用相应的协程函数。
+    loop = asyncio.get_event_loop()
+    # 将协程注册到事件循环，并启动事件循环
+    result = loop.run_until_complete(main(username, pwd, url))
     return result

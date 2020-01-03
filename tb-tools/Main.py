@@ -6,10 +6,10 @@ from PyQt5.QtWidgets import QFileDialog, QMessageBox, QTextEdit
 import TaobaoLand
 
 import ui, sys, HttpRequests
+from GetCookie import GetCookie
 
 userArray = []
 accountArray = []
-cookie = ''
 
 class myDialog(ui.Ui_MainWindow):
 
@@ -50,15 +50,22 @@ class myDialog(ui.Ui_MainWindow):
     # 登录页
     def land(self):
         self.statusbar.showMessage('')
+        cookies = GetCookie()
         if self.lineEdit_2.text() == '' or self.lineEdit_3.text() == '':
             self.statusbar.showMessage('用户名或密码为空')
             return
+        # 调用淘宝登录方法
         res = TaobaoLand.run(self.lineEdit_2.text(), self.lineEdit_3.text())
         if len(res) > 500:
             self.statusbar.showMessage('登录成功，存储cookie成功')
-            cookie = res
+            # 处理cookie
+            cookies.getCookie(res)
+            # 禁用输入框，登录按钮
+            self.lineEdit_2.setEnabled(False)
+            self.lineEdit_3.setEnabled(False)
+            self.pushButton.setEnabled(False)
         else:
-            self.statusbar.showMessage('登录失败，请重新运行工具')
+            self.statusbar.showMessage('登录失败，请重启工具')
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
