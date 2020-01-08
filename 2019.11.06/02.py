@@ -20,7 +20,8 @@ res = request.urlopen(request.Request(urlBase, bytes(data, encoding='utf-8'), he
 resp = json.loads(res.read().decode('utf-8'))['subjects']
 
 for item in resp:
-    request.urlretrieve(item['cover'], './images/02/%s.jpg'%item['title'])
     print(item['cover'])
+    print(item['title'])
+    request.urlretrieve(item['cover'], './images/02/%s.jpg'%item['title'])
 
 json.dump(resp, open('douban.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=4)

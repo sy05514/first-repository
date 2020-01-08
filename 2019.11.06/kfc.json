@@ -179,7 +179,7 @@
         "rownum": 23,
         "storeName": "东单",
         "addressDetail": "东城区东单北大街63号",
-        "pro": "礼品卡",
+        "pro": "Wi-Fi,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -211,7 +211,7 @@
         "rownum": 27,
         "storeName": "崇文门",
         "addressDetail": "崇文门外大街3号新世界商场一期北侧一层",
-        "pro": "Wi-Fi,礼品卡",
+        "pro": "Wi-Fi,点唱机,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -299,7 +299,7 @@
         "rownum": 38,
         "storeName": "右安门",
         "addressDetail": "右安门大街2号迦南公寓C座一层西部",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -475,7 +475,7 @@
         "rownum": 60,
         "storeName": "和义",
         "addressDetail": "南苑北里小区二区6号楼一层东南侧",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -491,7 +491,7 @@
         "rownum": 62,
         "storeName": "旧宫",
         "addressDetail": "旧宫镇旧宫西路3号物美超市一层东南侧",
-        "pro": "24小时,Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "24小时,Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -571,7 +571,7 @@
         "rownum": 72,
         "storeName": "通州新华大街",
         "addressDetail": "新华大街西街56号一层",
-        "pro": "24小时,Wi-Fi,店内参观,礼品卡,生日餐会,手机点餐",
+        "pro": "24小时,Wi-Fi,点唱机,店内参观,礼品卡,生日餐会,手机点餐",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -667,7 +667,7 @@
         "rownum": 84,
         "storeName": "四季青桥",
         "addressDetail": "西四环北路117号北京欧尚超市F1、B1",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -699,7 +699,7 @@
         "rownum": 88,
         "storeName": "六里桥南路",
         "addressDetail": "西三环南路10号一层",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "24小时,Wi-Fi,店内参观,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -714,7 +714,7 @@
     {
         "rownum": 90,
         "storeName": "密云南大街",
-        "addressDetail": "鼓楼南大街5号",
+        "addressDetail": "密云区鼓楼南大街5号",
         "pro": "24小时,Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
@@ -963,7 +963,7 @@
         "rownum": 121,
         "storeName": "建外SOHO",
         "addressDetail": "东三环中路39号建外SOHOB-0105",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "店内参观,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -971,7 +971,7 @@
         "rownum": 122,
         "storeName": "磁器口",
         "addressDetail": "崇文门外大街11号新成文化大厦南侧F1+F2",
-        "pro": "Wi-Fi,礼品卡",
+        "pro": "24小时,Wi-Fi,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -994,8 +994,8 @@
     {
         "rownum": 125,
         "storeName": "宣外大街",
-        "addressDetail": "宣武门外大街32号",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "addressDetail": "宣武门外大街32号（沃尔玛2层）",
+        "pro": "Wi-Fi,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1139,7 +1139,7 @@
         "rownum": 143,
         "storeName": "双桥",
         "addressDetail": "双桥国泰百货1层",
-        "pro": "24小时,礼品卡,生日餐会",
+        "pro": "24小时,Wi-Fi,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1203,7 +1203,7 @@
         "rownum": 151,
         "storeName": "宽街",
         "addressDetail": "张自忠路10号华人大厦西侧首层",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1267,7 +1267,7 @@
         "rownum": 159,
         "storeName": "信息路",
         "addressDetail": "农大南路与信息路交叉口东北角华联F1+F2",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "店内参观,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1355,7 +1355,7 @@
         "rownum": 170,
         "storeName": "北京南站",
         "addressDetail": "北京南站候车大厅B岛201号",
-        "pro": "礼品卡",
+        "pro": "Wi-Fi,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1435,13 +1435,13 @@
         "rownum": 180,
         "storeName": "大红门新世纪肯德基餐厅",
         "addressDetail": "海户屯北京新世纪服装商贸城一层南侧",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "Wi-Fi,点唱机,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
     {
         "rownum": 181,
-        "storeName": "八达岭步行街",
+        "storeName": "八达岭",
         "addressDetail": "八达岭特区外宾馆餐厅西侧的1－2层",
         "pro": "Wi-Fi,礼品卡",
         "provinceName": "北京市",
@@ -1522,7 +1522,7 @@
     {
         "rownum": 191,
         "storeName": "公益西桥",
-        "addressDetail": "南四环中路城南嘉园益城园14号楼一、二层",
+        "addressDetail": "南四环中路城南嘉园益城园14号楼一层",
         "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
@@ -1635,7 +1635,7 @@
         "rownum": 205,
         "storeName": "旧宫永辉",
         "addressDetail": "小红门路39号永辉超市一层东南侧",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1651,7 +1651,7 @@
         "rownum": 207,
         "storeName": "五孔桥家乐福",
         "addressDetail": "亮甲店危改小区（南区）3号楼地上部分家乐福定慧桥店首层西侧",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1731,7 +1731,7 @@
         "rownum": 217,
         "storeName": "新发地",
         "addressDetail": "风格与林苑甲9号楼1层102",
-        "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+        "pro": "24小时,Wi-Fi,点唱机,店内参观,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1859,7 +1859,7 @@
         "rownum": 233,
         "storeName": "北京南站二",
         "addressDetail": "北京南站候车大厅地下一层（快速进站口1）部分场地",
-        "pro": "礼品卡",
+        "pro": "Wi-Fi,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -1955,7 +1955,7 @@
         "rownum": 245,
         "storeName": "常营",
         "addressDetail": "朝阳北路常营丽景园6号楼一层115-116号及二号206-207号",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2027,7 +2027,7 @@
         "rownum": 254,
         "storeName": "双峪",
         "addressDetail": "双峪环岛东南角熙旺中心一层",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2155,7 +2155,7 @@
         "rownum": 270,
         "storeName": "北京南站五",
         "addressDetail": "北京南站地下一层到达层西南侧第5出站口旁",
-        "pro": "礼品卡",
+        "pro": "Wi-Fi,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2163,7 +2163,7 @@
         "rownum": 271,
         "storeName": "北京南站六",
         "addressDetail": "北京南站二层旅客出发层西南角（23B检票口）旁",
-        "pro": "礼品卡",
+        "pro": "Wi-Fi,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2179,7 +2179,7 @@
         "rownum": 273,
         "storeName": "大兴乐家",
         "addressDetail": "西红门京良路南侧乐家商业中心西侧一层",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2235,7 +2235,7 @@
         "rownum": 280,
         "storeName": "狼垡",
         "addressDetail": "狼垡亿发购物中心一层",
-        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2427,7 +2427,7 @@
         "rownum": 304,
         "storeName": "大兴西红门宜家餐厅",
         "addressDetail": "欣宁街15号L11层3-01-76-R号商铺",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2443,7 +2443,7 @@
         "rownum": 306,
         "storeName": "双龙-北工大南门对面",
         "addressDetail": "双龙南里204号",
-        "pro": "店内参观,礼品卡,生日餐会",
+        "pro": "Wi-Fi,店内参观,礼品卡,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2483,7 +2483,7 @@
         "rownum": 311,
         "storeName": "水立方",
         "addressDetail": "天辰东路11号1层东北1-6",
-        "pro": "Wi-Fi,店内参观,礼品卡",
+        "pro": "礼品卡",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -2955,7 +2955,7 @@
         "rownum": 370,
         "storeName": "怀柔万达",
         "addressDetail": "府前西街1号院1号楼3019号商铺",
-        "pro": "店内参观,生日餐会",
+        "pro": "Wi-Fi,店内参观,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -3075,7 +3075,7 @@
         "rownum": 385,
         "storeName": "中山大街",
         "addressDetail": "中山大街59号院1号楼1层01",
-        "pro": "Wi-Fi,生日餐会",
+        "pro": "Wi-Fi,点唱机,店内参观,生日餐会",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -3171,7 +3171,7 @@
         "rownum": 397,
         "storeName": "广外越都荟",
         "addressDetail": "广安门外大街178、180、甲180号1层F1-03A、04号商铺",
-        "pro": "Wi-Fi",
+        "pro": "Wi-Fi,店内参观",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -3371,7 +3371,7 @@
         "rownum": 422,
         "storeName": "新机场2号外卖点",
         "addressDetail": "大兴区国际机场国际抵港区域",
-        "pro": "Wi-Fi",
+        "pro": "Wi-Fi,机场店",
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -3393,7 +3393,7 @@
     },
     {
         "rownum": 425,
-        "storeName": "上地二",
+        "storeName": "上地二（数字谷）",
         "addressDetail": "东北旺西路8号院35号楼1层116号",
         "pro": "Wi-Fi,店内参观",
         "provinceName": "北京市",
@@ -3411,7 +3411,7 @@
         "rownum": 427,
         "storeName": "五彩城",
         "addressDetail": "海淀区海淀区清河中街66号院1号楼6层601号L6K01、L6K02、L6K03",
-        "pro": "精选店",
+        "pro": null,
         "provinceName": "北京市",
         "cityName": "北京市"
     },
@@ -3419,7 +3419,87 @@
         "rownum": 428,
         "storeName": "天力街",
         "addressDetail": "朝阳区东三环中路55号楼1层02-1 及-1层1-1",
+        "pro": "Wi-Fi,店内参观",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 429,
+        "storeName": "华威南路",
+        "addressDetail": "弘善家园404号楼1层103室02",
+        "pro": "Wi-Fi",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 430,
+        "storeName": "酒仙桥中路",
+        "addressDetail": "朝阳区酒仙桥路12号一层103平米和地下一层221平米",
+        "pro": "24小时,Wi-Fi,生日餐会,手机点餐",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 431,
+        "storeName": "长安商场",
+        "addressDetail": "复兴门外大街15号长安商场",
+        "pro": null,
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 432,
+        "storeName": "和平新城",
+        "addressDetail": "民旺园30号楼1层104房间",
         "pro": "Wi-Fi,点唱机,店内参观",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 433,
+        "storeName": "八达岭步行街餐厅",
+        "addressDetail": "延庆区八达岭特区外宾餐厅西侧3幢等7幢10号楼10-1",
+        "pro": "Wi-Fi",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 434,
+        "storeName": "新大郊亭桥",
+        "addressDetail": "东四环中路189号芳园里IDMALL购物中心地下一层",
+        "pro": "Wi-Fi,店内参观",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 435,
+        "storeName": "北京南站九",
+        "addressDetail": "丰台区北京南站高架层东南角",
+        "pro": "Wi-Fi,精选店",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 436,
+        "storeName": "科创十一街",
+        "addressDetail": "经济技术开发区科创十一街18号院1号楼B-6F-07",
+        "pro": "Wi-Fi",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 437,
+        "storeName": "门头沟龙湖",
+        "addressDetail": "门头沟区新城东街17号院4号楼",
+        "pro": "Wi-Fi,店内参观",
+        "provinceName": "北京市",
+        "cityName": "北京市"
+    },
+    {
+        "rownum": 438,
+        "storeName": "小米科技园",
+        "addressDetail": "海淀区安宁庄路小米科技园G栋1层",
+        "pro": "Wi-Fi,店内参观",
         "provinceName": "北京市",
         "cityName": "北京市"
     }
