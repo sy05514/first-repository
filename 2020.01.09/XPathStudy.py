@@ -31,10 +31,7 @@ for var in infoList:
         content = contentTemp[0].replace(' ', '').replace('\n', '')
     else:
         content = ''
-    jsonTemp = {}
-    jsonTemp[title] = title
-    jsonTemp[author] = author
-    jsonTemp[content] = content
+    jsonTemp = {title: title, author: author, content: content}
     jsonInfo.append(jsonTemp)
 
 json.dump(jsonInfo, open('tiebaJson.json', 'w', encoding="utf-8"), ensure_ascii=False, indent=4)

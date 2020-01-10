@@ -8,11 +8,10 @@
       <sourceFolder url="file://$MODULE_DIR$/计算器(继承重写)" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/open-read-txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tb-tools" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.7 (first-repository)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-  <component name="TestRunnerService">
-    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>
