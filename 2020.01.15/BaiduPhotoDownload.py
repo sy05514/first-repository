@@ -1,13 +1,19 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from lxml import etree
 from urllib import request
 import time
+
+# 使用Chrome无头浏览器
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
 
 url = 'http://image.baidu.com/search/index?tn=baiduimage&ps=1&ct=201326592&lm=-1&cl=2&nc=1&ie=utf-8&word=python'
 
 path = 'chromedriver.exe'
 
-driver = webdriver.Chrome(path)
+driver = webdriver.Chrome(options=chrome_options)
 
 driver.get(url)
 
