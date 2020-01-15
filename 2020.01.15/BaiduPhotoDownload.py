@@ -5,7 +5,9 @@ from urllib import request
 import time
 
 # 使用Chrome无头浏览器
+# 创建一个参数对象，用来控制chrome以无界面方式打开
 chrome_options = Options()
+# 固定写法
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-gpu')
 
@@ -13,7 +15,7 @@ url = 'http://image.baidu.com/search/index?tn=baiduimage&ps=1&ct=201326592&lm=-1
 
 path = 'chromedriver.exe'
 
-driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome(executable_path=path, options=chrome_options)
 
 driver.get(url)
 
